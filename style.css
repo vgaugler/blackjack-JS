@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family:'Bangers', cursive, sans-serif;
+}
+
+body {
+    background: #179e4f;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    
+}
+
+.heart{
+    position: fixed;
+    top: -1vh;
+    font-size: 2rem;
+    transform: translateY(0);
+    animation: fall 3s linear forwards;
+    z-index: 1000;
+}
+
+body::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #F9E9A7;
+    background: -webkit-linear-gradient(top left, #F9E9A7, #F7CF1D);
+    background: -moz-linear-gradient(top left, #F9E9A7, #F7CF1D);
+    background: linear-gradient(to bottom right, #F9E9A7, #F7CF1D);
+	clip-path: circle(30% at right 70%);
+}
+
+body::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(#f00,#f0f);
+	clip-path: circle(20% at 10% 10%);
+
+}
+
+.main {
+	position: relative;
+	width: 80%;
+	height: 630px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    flex-direction: column;
+	background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+	box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	backdrop-filter: blur(2px);
+    z-index: 1;
+}
+
+.header {
+    height: 20%;
+    width: 100%;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.box_dealer {
+    height: 30%;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+
+}
+
+.title_dealer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+}
+
+img {
+    position: relative;
+    max-width: 80px;
+    height: auto;
+    
+}
+
+.score_dealer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 35px;
+}
+
+.score_dealer p{
+    margin : 0 15px;
+}
+
+.box_instruction {
+    height: 20%;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    color: white;
+}
+
+.box_player {
+
+    height: 30%;
+    width: 90%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	backdrop-filter: blur(5px);
+    margin-bottom: 15px;
+    font-size: 30px;
+}
+
+.score_player {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 35px;
+}
+
+.score_player p {
+    margin : 0 15px;
+}
+
+button {
+    font-size: 25px;
+    margin: 0 15px;
+    background-image: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+    padding: 15px 45px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    border-radius: 10px;
+      
+}
+
+button:hover {
+    background-position: right center; /* change the direction of the change here */
+    text-decoration: none;
+}
+    
+@keyframes fall {
+    to {
+        transform: translateY(105vh);
+    }
+}
+
+@media screen and (max-width: 360px){
+ 
+    .header {
+
+        font-size: 15px;
+    }
+    .btn_player{
+        
+        display: flex;
+        
+    }
+    button{
+        font-size: 20px;
+        padding: 15px 25px;
+    }
+    .instruction{
+        text-align: center;
+    }
+
+}
